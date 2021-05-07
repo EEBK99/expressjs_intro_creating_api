@@ -13,7 +13,12 @@ router.post("/reaction/like", (req, res) => {
   res.send("Like reacted");
 });
 
-router.get("/getuser", (req, res) => {
+// router.get("/getuser", (req, res) => {
+//   res.status(201).json({
+//     username: "Haseeb Khan",
+//   });
+// });
+router.get("/:id", (req, res) => {
   res.status(201).json({
     username: "Haseeb Khan",
   });
