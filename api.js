@@ -42,37 +42,8 @@ app.set("view engine", "ejs");
 // is a method inbuilt in express to recognize the incoming Request Object as strings or arrays
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.render("./views/index");
-});
-
-app.get("/about", (req, res) => {
-  res.render("./views/about");
-});
-
-app.get("/contact", (req, res) => {
-  res.render("./views/contact");
-});
-
 // using router to complete url of specific path
 app.use("/", mainRouter);
 app.use("/user", userRouter);
-
-// app.post("/", (req, res) => {
-//   res.send("Post method");
-// });
-
-// app.delete("/", (req, res) => {
-//   res.send("Delete method");
-// });
-
-// app.get("/user", (req, res) => {
-//   //   res.status(204).json({
-//   //     username: "Haseeb Khan",
-//   //   });
-//   res.status(201).json({
-//     username: "Haseeb Khan",
-//   });
-// });
 
 app.listen(3000, console.log("Server Started!..."));
