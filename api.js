@@ -42,15 +42,15 @@ app.set("view engine", "ejs");
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("/");
+  res.render("./views/index");
 });
 
 app.get("/about", (req, res) => {
-  res.send("About");
+  res.render("./views/about");
 });
 
 app.get("/contact", (req, res) => {
-  res.send("Contact");
+  res.render("./views/contact");
 });
 
 // using router to complete url of specific path
