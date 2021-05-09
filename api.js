@@ -31,6 +31,7 @@
 
 const express = require("express");
 const userRouter = require("./Router/user");
+const mainRouter = require("./Router/main");
 const app = express();
 
 // using express ejs template engine
@@ -54,6 +55,7 @@ app.get("/contact", (req, res) => {
 });
 
 // using router to complete url of specific path
+app.use("/", mainRouter);
 app.use("/user", userRouter);
 
 // app.post("/", (req, res) => {
